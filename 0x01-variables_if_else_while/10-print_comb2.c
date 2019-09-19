@@ -12,7 +12,7 @@ for (j = '0' ; j <= '9' ; j++)
 {
 putchar (i);
 putchar (j);
-if (x != '9' || z != '9')
+if (i != '9' || j != '9')
 {
 putchar (',');
 putchar (' ');
@@ -20,3 +20,4 @@ putchar (' ');
 }
 putchar ('\n');
 return (0);
+}
