@@ -12,5 +12,6 @@ while (i < 'z')
 if ((i != 'q') && (i != 'e'))
 putchar(i);
 i++;
+}
 return (0);
 }
