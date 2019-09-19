@@ -11,6 +11,6 @@ for (i = '0' ; i <= '9' ; i++)
 putchar(i % 10 + '0');
 for (i = 'A' ; i <= 'F' ; i++)
 putchar(i);
-putchar("\n");
+putchar('\n');
 return (0);
 }
