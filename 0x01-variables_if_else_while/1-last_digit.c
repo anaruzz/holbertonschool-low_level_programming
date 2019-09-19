@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <time.h>
 /**
- * main - entry block
- * @void: no argument
- * Return: 0 (Sucess)
-**/
+ * main - Entry point
+ * Last digits
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 int n, a;
