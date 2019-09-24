@@ -19,7 +19,7 @@ printf("%d, ", i);
 i++;
 }
 else
-{   
+{
 printf("%d", i);
 i++;
 }
