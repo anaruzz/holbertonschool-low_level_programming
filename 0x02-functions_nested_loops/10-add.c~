@@ -1,0 +1,12 @@
+#include "holberton.h"
+/**
+ * add - entry point
+ * @a: number
+ * @b: number
+ * Return: int (Success)
+ */
+int add(int, int)
+{
+int a, b;
+return (a + b);
+}
