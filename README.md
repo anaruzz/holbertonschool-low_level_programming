@@ -1,1 +1,1 @@
-learning about debugging
+learning about low level programming
