@@ -11,7 +11,7 @@ for (i = 0; s[i] ; i++)
 ;
 int j;
 char a;
-for (j = 0; j <= (i / 2); j++)
+for (j = 0; j < i; j++)
 {
 a = s[i - 1];
 s[i - 1] = s[j];
