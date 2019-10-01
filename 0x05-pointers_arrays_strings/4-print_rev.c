@@ -7,12 +7,9 @@
 void print_rev(char *str)
 {
 int i = 0;
-while (*(str + i) != '\0')
-{
-i++;
-}
-int j;
-for (j = i; j != -1; j--)
-_putchar(*(str + j));
+for (i = 0; *(str + i); i++)
+;
+for (; i > 0; i--)
+_putchar(*(str + i - 1));
 _putchar('\n');
 }
