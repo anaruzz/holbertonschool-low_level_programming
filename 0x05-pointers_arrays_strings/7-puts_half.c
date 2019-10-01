@@ -10,11 +10,12 @@ int i = 0;
 int n;
 while (*(str + i) != '\0')
 i++;
+int k = i;
 if (i % 2 == 0)
 n = i / 2;
 else
 n = (i - 1) / 2;
-for (i = n; i >= 0; i--)
+for (i = n; i <= k; i++)
 _putchar(*(str + i));
 _putchar('\n');
 }
