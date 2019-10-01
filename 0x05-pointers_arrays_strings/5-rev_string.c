@@ -10,7 +10,7 @@ int i, j;
 char a;
 for (j = 0; s[j] ; j++)
 ;
- for (i = 0; i < (j / 2); i++)
+for (i = 0; i < (j / 2); i++)
 {
 a = s[i];
 s[i] = s[j - i - 1];
