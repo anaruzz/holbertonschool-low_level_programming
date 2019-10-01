@@ -12,7 +12,7 @@ i++;
 i--;
 int j = 0;
 char a;
- int k = i;
+int k = i;
 while (j < (k / 2))
 {
 a = *(s + i);

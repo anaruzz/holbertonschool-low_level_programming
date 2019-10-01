@@ -13,8 +13,6 @@ i++;
 }
 int j;
 for (j = i; j != -1; j--)
-{
 _putchar(*(str + j));
-}
 _putchar('\n');
 }
