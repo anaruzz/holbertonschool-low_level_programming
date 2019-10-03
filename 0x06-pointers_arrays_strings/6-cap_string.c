@@ -6,12 +6,14 @@
  */
 char *cap_string(char *ch)
 {
-int i;
-for (i = 0; ch[i]; i++)
+  int i, j = 0;
+  while (ch[j])
+    j++;
+for (i = 0; i < j; i++)
 {
-if(ch[i] == ' ' || ch[i] == '\t'|| ch[i] =='\n' || ch[i] == ',' || ch[i] == ';'|| ch[i] =='.' || ch[i] == '!' || ch[i] == '?'|| ch[i] =='"' || ch[i] == '(' || ch[i] == ')' || ch[i] == '{' || ch[i] == '}')
+if(ch[i - 1] == ' ' || ch[i - 1] == '\t'|| ch[i - 1] =='\n' || ch[i - 1] == ',' || ch[i - 1] == ';'|| ch[i - 1] =='.' || ch[i - 1] == '!' || ch[i - 1] == '?'|| ch[i - 1] =='"' || ch[i - 1] == '(' || ch[i - 1] == ')' || ch[i - 1] == '{' || ch[i -1] == '}')
 {
-if (ch[i+1] >= 'a' && ch[i+1] <= 'z')
+if (ch[i] >= 'a' && ch[i] <= 'z')
 ch[i+1] = ch[i+1] - 32;
 }
 }
