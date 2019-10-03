@@ -12,14 +12,9 @@ for (i = 0; s1[i]; i++)
 ;
 for (j = 0 ; s2[j]; j++)
 ;
-int inf;
-if (i > j)
-inf = j;
-else
-inf = i;
 k = 0;
 int c = 0;
-while (k < inf && c == 0)
+ while (k < (i - 1) && c == 0)
 {
 c = s1[k] - s2[k];
 k++;
