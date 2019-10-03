@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <unistd.h>
 /**
  * cap_string - capitalize all words
  * @ch: string
