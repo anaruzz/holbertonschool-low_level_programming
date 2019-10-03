@@ -1,25 +1,24 @@
 #include "holberton.h"
 #include <unistd.h>
-#include <stdio.h>
 /**
  * cap_string - capitalize all words
  * @ch: string
  * Return: pointer
  */
-char *cap_string(char *ch)
+char *cap_string(char *c)
 {
-  int i = 0, j ;
-  while (ch[i])
-    i++;
-  j = 0;
-  while (j < i)
-    {
-      if (ch[j - 1] == ' ' || ch[j - 1] == '\t' || ch[j - 1] == '\n' || ch[j - 1] == '.')
-	{
-	  if (ch[j] >= 97 && ch[j] <= 122)
-	    ch[j] = ch[j] - 32;
-	}
-      j++;
-    }
-return (ch);
+int i = 0, j;
+while (c[i])
+i++;
+j = 0;
+while (j <= i)
+{
+if (c[j - 1] == ' ' || c[j - 1] == '\n' || c[j - 1] == 9 || c[j - 1] == '.')
+{
+if (c[j] >= 97 && c[j] <= 122)
+c[j] = c[j] - 32;
+}
+j++;
+}
+return (c);
 }
