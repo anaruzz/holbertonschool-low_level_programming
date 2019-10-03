@@ -14,7 +14,7 @@ for (j = 0 ; s2[j]; j++)
 ;
 k = 0;
 int c = 0;
- while (k < (i - 1) && c == 0)
+while (k <= (i - 1) && c == 0)
 {
 c = s1[k] - s2[k];
 k++;
