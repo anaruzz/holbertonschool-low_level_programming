@@ -2,7 +2,7 @@
 #include <unistd.h>
 /**
  * cap_string - capitalize all words
- * @ch: string
+ * @c: string
  * Return: pointer
  */
 char *cap_string(char *c)
