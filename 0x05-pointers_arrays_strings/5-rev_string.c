@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * rev_string - reverse a string
  * @s: string
@@ -10,6 +11,7 @@ int i, j;
 char a;
 for (j = 0; s[j] ; j++)
 ;
+putchar(j);
 for (i = 0; i < (j / 2); i++)
 {
 a = s[i];
