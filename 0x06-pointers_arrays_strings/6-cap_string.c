@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <unistd.h>
+#include <stdio.h>
 /**
  * cap_string - capitalize all words
  * @ch: string
@@ -7,7 +8,7 @@
  */
 char *cap_string(char *ch)
 {
-  int i, j = 0;
+  int i = 0, j ;
   while (ch[i])
     i++;
   j = 0;
