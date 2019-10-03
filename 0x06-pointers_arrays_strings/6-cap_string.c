@@ -7,9 +7,11 @@
  */
 char *cap_string(char *c)
 {
-  int i = 0, x, j;
+int i = 0, j;
 while (c[i])
 i++;
+if (c[0] >= 'a' && c[0] <= 'z')
+c[0] = c[0] - 32;
 j = 0;
 while (j <= i)
 {
@@ -19,14 +21,6 @@ if (c[j] >= 97 && c[j] <= 122)
 c[j] = c[j] - 32;
 }
 j++;
-}
-for(j = 0; j<= i; j++)
-{
-if (c[j] == '\t')
-{
-for (x = j; x <= i; x++)
-c[x] = c[x + 1];
-}
 }
 return (c);
 }
