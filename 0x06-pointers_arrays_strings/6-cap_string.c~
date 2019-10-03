@@ -1,0 +1,19 @@
+#include "holberton.h"
+/**
+ * cap_string - capitalize all words
+ * @ch: string
+ * Return: pointer
+ */
+char *cap_string(char *ch)
+{
+int i;
+for (i = 0; ch[i]; i++)
+{
+if(ch[i] == ',' || ch[i] == ';'|| ch[i] ==' ' || ch[i] == '.' || ch[i] == '!'|| ch[i] =='?' || ch[i] == '"' || ch[i] == '('|| ch[i] ==')' || ch[i] == '{' || ch[i] == '}' || ch[i] == '\t')
+{
+if (ch[i+1] >= 'a' && ch[i+1] <= 'z')
+ch[i+1] = ch[i+1] - 32;
+}
+}
+return (ch);
+}
