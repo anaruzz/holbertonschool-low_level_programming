@@ -1,0 +1,29 @@
+#include "holberton.h"
+/**
+ * print_number - print a number
+ * @n: integer
+ * Return: void
+ */
+void print_number(int n)
+{
+int c, a = 0;
+if (n < 0)
+{
+n = (- 1) * n;
+_putchar('-');
+}
+while (n != 0)
+{
+a = a + ( n % 10);
+a = a * 10;
+n = n / 10;
+}
+a = a / 10;
+ _putchar(a);
+while (a != 0)
+{
+c = a % 10;
+_putchar(c + '0');
+a = a / 10;
+}
+}
