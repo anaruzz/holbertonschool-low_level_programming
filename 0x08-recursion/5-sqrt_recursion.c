@@ -6,11 +6,10 @@
 */
 int _sqrt_recursion(int n)
 {
-if (n <= 0)
+if (n >= 1)
+return (test_sqrt(n, (n + 1) / 2));
+else
 return (-1);
-else if (n == 1)
-return (1);
-return (test_sqrt(n, n / 2));
 }
 /**
 *test_sqrt - test natural squar
@@ -22,7 +21,7 @@ int test_sqrt(int a, int b)
 {
 if (b * b == a)
 return (b);
-else if (b == 1)
+else if (b < 0)
 return (-1);
 else
 return (test_sqrt(a, b - 1));
