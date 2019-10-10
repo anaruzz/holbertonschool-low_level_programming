@@ -16,7 +16,6 @@ l++;
 for (i = 0; i <= l; i++)
 {
 if (s[i] == c)
-s += i;
 return (&(s[i]));
 }
 if (i < l)
