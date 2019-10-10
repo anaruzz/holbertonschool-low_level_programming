@@ -7,7 +7,7 @@
 int _sqrt_recursion(int n)
 {
 if (n >= 1)
-return (test_sqrt(n, (n + 1) / 2));
+return (test_sqrt(n, (n / 2) + 1));
 else
 return (-1);
 }
