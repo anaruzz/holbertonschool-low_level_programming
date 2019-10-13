@@ -15,6 +15,7 @@ printf("0\n");
 int i, j, x;
 for (i = 1; i < argc; i++)
 {
+x += atoi(argv[i]);
 for (j = 0; argv[i][j]; j++)
 {
 if (argv[i][j] < 48  || argv[i][j] > 57)
@@ -23,7 +24,6 @@ printf("Error\n");
 return (1);
 }
 }
-x += atoi(argv[i]);
 }
 printf("%d\n", x);
 return (0);
