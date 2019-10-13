@@ -20,7 +20,7 @@ for (j = 0; argv[i][j]; j++)
 {
 if (argv[i][j] < 48  || argv[i][j] > 57)
 {
-printf("Error\n");
+printf("Error");
 return (1);
 }
 }
