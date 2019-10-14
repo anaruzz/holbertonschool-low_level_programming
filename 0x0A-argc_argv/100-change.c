@@ -16,7 +16,6 @@ return (1);
 if (atoi(argv[1]) <= 0)
 {
 printf("0\n");
-return (1);
 }
 int i = 0;
 int x = atoi(argv[1]);
