@@ -32,8 +32,8 @@ x = x % 5;
 i+= x / 2;
 x = x %2;
 
-i+= x / 1;
-x = x %1;
+i += x / 1;
+x = x % 1;
 printf("%d\n", i);
 return (0);
 }
