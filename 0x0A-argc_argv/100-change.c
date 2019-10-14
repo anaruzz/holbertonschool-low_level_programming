@@ -20,7 +20,7 @@ return (1);
 }
 int i = 0;
 int x = atoi(argv[1]);
-i += x / 25;
+i = x / 25;
 x = x % 25;
 
 i += x / 10;
@@ -33,7 +33,6 @@ i+= x / 2;
 x = x %2;
 
 i += x / 1;
-x = x % 1;
 printf("%d\n", i);
 return (0);
 }
