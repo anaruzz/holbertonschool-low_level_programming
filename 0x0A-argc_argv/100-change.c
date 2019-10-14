@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-* main - adds numbers
+* main - print change
 * @argc: int
 * @argv: pointer
 * Return: int
@@ -14,8 +14,6 @@ if (argc != 2)
 printf("Error\n");
 return (1);
 }
-else
-{
 int x = atoi(argv[1]);
 if (x >= 25)
 {
@@ -34,6 +32,5 @@ x = x % 5;
 }
 i += x;
 x = 0;
-}
 printf("%d\n", i);
 }
