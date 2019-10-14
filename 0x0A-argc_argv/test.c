@@ -8,7 +8,6 @@
 */
 int main(int argc, char *argv[])
 {
-int i = 0;
 if (argc != 2)
 {
 printf("Error\n");
@@ -19,6 +18,7 @@ if (atoi(argv[1]) <= 0)
 printf("0\n");
 return (1);
 }
+int i = 0;
 int x = atoi(argv[1]);
 i += x / 25;
 x = x % 25;

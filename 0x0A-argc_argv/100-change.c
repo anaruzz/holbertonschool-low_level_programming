@@ -8,7 +8,6 @@
 */
 int main(int argc, char *argv[])
 {
-int i = 0;
 if (argc != 2)
 {
 printf("Error\n");
@@ -19,27 +18,22 @@ if (atoi(argv[1]) <= 0)
 printf("0\n");
 return (1);
 }
+int i = 0;
 int x = atoi(argv[1]);
-if (x >= 25)
-{
 i += x / 25;
 x = x % 25;
-}
-if (x >= 10)
-{
+
 i += x / 10;
 x = x % 10;
-}
-if (x < 10)
-{
+
 i += x / 5;
 x = x % 5;
-}
-if (x < 5)
-{
+
 i+= x / 2;
 x = x %2;
-}
-i += x;
+
+i += x / 1;
+x = x % 1;
 printf("%d\n", i);
+return (0);
 }
