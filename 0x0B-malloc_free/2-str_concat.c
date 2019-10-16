@@ -18,15 +18,14 @@ char *ch;
 if (s1 == NULL)
 s1[0] = '\0';
 
-for(j = 0; s1[j]; j++)
+for (j = 0; s1[j]; j++)
 ;
 
 if (s2 == NULL)
 s2[0] = '\0';
 
-for(k = 0; s2[k]; k++)
+for (k = 0; s2[k]; k++)
 ;
-
 
 ch = malloc(j + k + 1);
 if (ch == NULL)
@@ -35,18 +34,17 @@ return (NULL);
 
 for (i = 0; i < j; i++)
 ch[i] = s1[i];
-
+if (ch == NULL)
+return (NULL);
 
 for (; i < j + k; i++)
 {
 ch[i] = s2[a];
 a++;
 }
-ch[i + 1] = '\0';
+ch[a + 1] = '\0';
 return (ch);
 
 if (ch == NULL)
 return (NULL);
-
-
 }
