@@ -12,40 +12,40 @@ char *str_concat(char *s1, char *s2)
 unsigned int j = 0;
 unsigned int k = 0;
 unsigned int i = 0;
-unsigned int a = 0;
 char *ch;
-
-if (s1 != NULL)
-for (j = 0; s1[j]; j++)
-;
-else
-s1[0] = '\0';
-
-
-if (s2 != NULL)
-for (k = 0; s2[k]; k++)
-;
-else
-s2[0] = '\0';
-
-ch = malloc(j + k + 1);
-if (ch == NULL)
-return (NULL);
-
-
-for (i = 0; i < j; i++)
-ch[i] = s1[i];
-if (ch == NULL)
-return (NULL);
-
-for (; i < j + k; i++)
+if (s1 == NULL)
 {
-ch[i] = s2[a];
-a++;
+s1[0] = '\0';
+i = 1;
 }
-ch[a + 1] = '\0';
+else
+{
+while (s1[i])
+i++;
+}
+if (s2 == NULL)
+{
+s1[0] = '\0';
+j = 1;
+}
+else
+{
+while (s2[j])
+j++;
+}
+ch = malloc((i + j) *sizeof(char) + 1);
+if (ch == NULL)
+return (NULL);
+for (k = 0 ; k < i; k++)
+ch[k] = s1[k];
+i = i + j;
+j = 0;
+for (; k < i; k++)
+{
+ch[k] = s2[j];
+j++;
+}
 return (ch);
-
 if (ch == NULL)
 return (NULL);
 }
