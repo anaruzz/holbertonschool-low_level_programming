@@ -9,29 +9,23 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-unsigned int j;
-unsigned int k = 0;
-unsigned int i;
+unsigned int j = 0, k = 0, i = 0;
 char *ch;
 if (s1 == NULL)
 {
 s1[0] = '\0';
-i = 0;
 }
 else
 {
-i = 0;
 while (s1[i] != '\0')
 i++;
 }
 if (s2 == NULL)
 {
 s1[0] = '\0';
-j = 0;
 }
 else
 {
-j = 0;
 while (s2[j] != '\0')
 j++;
 }
@@ -49,6 +43,4 @@ j++;
 }
 ch[k + 1] = '\0';
 return (ch);
-if (ch == NULL)
-return (NULL);
 }
