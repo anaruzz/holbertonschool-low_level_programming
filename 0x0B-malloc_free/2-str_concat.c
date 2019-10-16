@@ -45,7 +45,7 @@ for (; k < i; k++)
 ch[k] = s2[j];
 j++;
 }
-ch[k + 1]= '\0';
+ch[k + 1] = '\0';
 return (ch);
 if (ch == NULL)
 return (NULL);
