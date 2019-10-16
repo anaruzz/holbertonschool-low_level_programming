@@ -16,23 +16,23 @@ char *ch;
 if (s1 == NULL)
 {
 s1[0] = '\0';
-i = 1;
+i = 0;
 }
 else
 {
 i = 0;
-while (s1[i])
+while (s1[i] != '\0')
 i++;
 }
 if (s2 == NULL)
 {
 s1[0] = '\0';
-j = 1;
+j = 0;
 }
 else
 {
 j = 0;
-while (s2[j])
+while (s2[j] != '\0')
 j++;
 }
 ch = malloc((i + j) *sizeof(char) + 1);
