@@ -15,17 +15,18 @@ unsigned int i = 0;
 unsigned int a = 0;
 char *ch;
 
-if (s1 == NULL)
-s1[0] = '\0';
-
+if (s1 != NULL)
 for (j = 0; s1[j]; j++)
 ;
+else
+s1[0] = '\0';
 
-if (s2 == NULL)
-s2[0] = '\0';
 
+if (s2 != NULL)
 for (k = 0; s2[k]; k++)
 ;
+else
+s2[0] = '\0';
 
 ch = malloc(j + k + 1);
 if (ch == NULL)
