@@ -13,10 +13,12 @@ return (NULL);
 char *t;
 t = malloc(size * sizeof(char));
 unsigned int i;
+
+if (t == 0)
+return (NULL);
+
 for (i = 0 ; i < size; i++)
 *(t + i) = c;
-if (sizeof(t) == 0)
-return (NULL);
-else
+
 return (t);
 }
