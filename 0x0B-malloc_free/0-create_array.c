@@ -12,12 +12,16 @@ if (size == 0)
 return (NULL);
 else
 {
-char *t = malloc(size * sizeof(char));
+char *t ;
+t = malloc(size * sizeof(char));
 unsigned int i;
 for (i = 0 ; i < size; i++)
 {
-t[i] = c;
+*(t + i) = c;
 }
+}
+if (sizeof(t) == 0)
+return (NULL);
+else
 return (t);
-}
 }
