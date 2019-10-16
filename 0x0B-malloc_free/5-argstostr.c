@@ -10,7 +10,7 @@
 char *argstostr(int ac, char **av)
 {
 char *ch;
-int i, j, k, s = 0;;
+int i, j, k, s = 0;
 
 if (ac == 0 || av == NULL)
 return (NULL);
@@ -31,7 +31,7 @@ for (j = 0; av[i][j] != '\0'; j++)
 ch[k] = av[i][j];
 k++;
 }
-ch[k]='\n';
+ch[k] = '\n';
 k++;
 }
 return (ch);
