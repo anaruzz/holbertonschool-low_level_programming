@@ -35,6 +35,8 @@ if (ch == NULL)
 return (NULL);
 if (n > j)
 n = j;
+else
+j = n;
 }
 i = 0;
 while (s1[i] != '\0')
