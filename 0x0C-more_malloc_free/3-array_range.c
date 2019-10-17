@@ -21,7 +21,7 @@ c = malloc(sizeof(int) * (diff));
 if (c == NULL)
 return (NULL);
 
-for (i = min; i <= diff; i++)
+for (i = 0; i <= diff; i++)
 {
 c[i] = min;
 min++;
