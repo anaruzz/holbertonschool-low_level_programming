@@ -48,5 +48,7 @@ while (j < n)
 ch[j + i] = s2[j];
 j++;
 }
+if (ch == NULL)
+return (NULL);
 return (ch);
 }
