@@ -1,5 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include <limits.h>
 /**
 * string_nconcat - concatenate two strings
 * @s1: strings
