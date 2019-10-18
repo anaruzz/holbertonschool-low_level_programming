@@ -23,7 +23,7 @@ while (s2[j] != '\0')
 j++;
 }
 
-ch = malloc(sizeof(char) * (i + j) + 1);
+ch = malloc(sizeof(char) * (i + j + 1));
 if (ch == NULL)
 return (NULL);
 for (k = 0 ; k < i; k++)
@@ -31,7 +31,7 @@ ch[k] = s1[k];
 
 
 for (k = 0; k < j; k++)
-ch[k + i] = s2[j];
+ch[k + i] = s2[k];
 ch[j + i] = '\0';
 
 return (ch);
