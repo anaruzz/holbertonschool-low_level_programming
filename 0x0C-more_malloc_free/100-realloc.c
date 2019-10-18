@@ -25,7 +25,7 @@ if (a == NULL)
 return (NULL);
 i = 0;
 b = ptr;
-while (i <= old_size)
+while (i < old_size)
 {
 a[i] = b[i];
 i++;
