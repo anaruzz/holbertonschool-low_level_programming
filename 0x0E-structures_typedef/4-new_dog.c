@@ -37,19 +37,17 @@ d = malloc(sizeof(dog_t));
 if (d == NULL)
 return (NULL);
 d->name = _strdup(name);
-if (d->name == NULL)
+if (d->name == NULL && name)
 {
 free(d);
 return (NULL);
 }
 d->age = age;
 d->owner = _strdup(owner);
-if (d->owner == NULL)
+if (d->owner == NULL && owner)
 {
 free(d);
 return (NULL);
 }
-if (d == NULL)
-return (NULL);
 return (d);
 }
