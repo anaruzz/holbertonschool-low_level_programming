@@ -52,7 +52,7 @@ free(d);
 return (NULL);
 }
 d->age = age;
-d->owner = _strdup(d->owner);
+d->owner = _strdup(owner);
 if (d->owner == NULL)
 {
 free(d);
