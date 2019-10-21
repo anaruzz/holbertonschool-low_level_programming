@@ -9,28 +9,19 @@
 */
 char *_strdup(char *str)
 {
-
-unsigned int i, j;
-char *t;
+int i = 0;
+char *ret;
 if (str == NULL)
 return (NULL);
-
-i = 0;
-while (str[i])
+while (*str++)
 i++;
-
-t = malloc(sizeof(char) * i + 1);
-if (t == NULL)
+ret = malloc(sizeof(char) * (i + 1));
+if (!ret)
 return (NULL);
-
-for (j = 0 ; j < i; j++)
-t[j] = str[j];
-t[j + 1] = '\0';
-return (t);
-
-
+for (i++; i--;)
+ret[i] = *--str;
+return (ret);
 }
-
 
 /**
  * new_dog - create dog
