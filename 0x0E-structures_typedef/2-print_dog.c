@@ -1,8 +1,8 @@
 #include "dog.h"
 #include <stdio.h>
- /**
- * print_dog - initialize variable of type struct dog
- * d: struct dog
+/**
+ * print_dog - check the code for Holberton School students.
+ * @d: struct dog
  * Return: Void.
  */
 void print_dog(struct dog *d)
@@ -14,8 +14,10 @@ printf("Name: %s\n", d->name);
 else
 printf("Name :(nil)");
 
+if (d->age != 0)
 printf("Age: %f\n", d->age);
-
+else
+printf("Age: (nil)");
 if (d->owner != NULL)
 printf("Owner: %s\n", d->owner);
 else
