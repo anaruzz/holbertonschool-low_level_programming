@@ -33,8 +33,10 @@ return (t);
 
 
 /**
- * print_dog - check the code for Holberton School students.
- * @d: struct dog
+ * new_dog - create dog
+ * @name: string
+ * @age: float
+ * @owner: string
  * Return: Void.
  */
 dog_t *new_dog(char *name, float age, char *owner)
