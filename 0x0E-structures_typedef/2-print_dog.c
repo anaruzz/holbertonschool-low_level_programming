@@ -24,5 +24,5 @@ else
 printf("Owner: (nil)");
 }
 else
-printf("%c",'\0');
+_putchar('\0');
 }
