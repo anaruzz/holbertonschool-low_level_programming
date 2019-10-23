@@ -9,10 +9,14 @@
 */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-if (size <= 0 || array == NULL || cmp == NULL)
+if (array == NULL)
+return (-1);
+if (cmp == NULL)
+return (-1);
+if (size <= 0)
 return (-1);
 int i = 0,j;
-while (i <= size)
+while (i < size)
 {
 i++;
 j = cmp(array[i]);
