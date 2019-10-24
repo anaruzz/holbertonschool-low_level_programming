@@ -7,7 +7,7 @@
 *
 * Return: Always 0
 */
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 {
 int i, bytes;
 char *hexa;
@@ -27,5 +27,6 @@ for (i = 0; i < bytes; i++)
 {
 printf("%02hhx ", hexa[i]);
 }
+printf("\n");
 return (0);
 }
