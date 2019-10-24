@@ -25,7 +25,9 @@ exit(2);
 hexa = (char *) main;
 for (i = 0; i < bytes; i++)
 {
-printf("%02hhx ", hexa[i]);
+printf("%02hhx", hexa[i]);
+if (i != bytes - 1)
+printf(" ");
 }
 printf("\n");
 return (0);
