@@ -44,15 +44,15 @@ int op_div(int a, int b)
 {
 if (b == 0)
 {
-  printf("Error");
-  exit(100);
+printf("Error");
+exit(100);
 }
 return (a / b);
 }
 
 
 /**
-* op_div - operation funcion
+* op_mod- operation funcion
 * @a: integer
 * @b: integer
 * Return: integer
@@ -61,8 +61,8 @@ int op_mod(int a, int b)
 {
 if (b == 0)
 {
-  printf("Error");
-  exit(100);
+printf("Error");
+exit(100);
 }
 return (a % b);
 }

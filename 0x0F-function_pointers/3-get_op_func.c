@@ -3,9 +3,8 @@
 #include <string.h>
 #include "3-calc.h"
 /**
-* op_div - operation funcion
-* @a: integer
-* @b: integer
+* get_op_func - operation funcion
+* @s: string
 * Return: integer
 */
 int (*get_op_func(char *s))(int, int)
