@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 {
 va_list al;
 int i, x = 0, a;
-float f;
+double f;
 char *s, c;
 
 va_start(al, format);
@@ -28,7 +28,7 @@ i = va_arg(al, int);
 printf("%d", i);
 break;
 case 'f':
-f = va_arg(al, double);
+f =  va_arg(al, double);
 printf("%f", f);
 break;
 case 's':
@@ -41,10 +41,11 @@ break;
 printf("%s", s);
 break;
 }
-x++;
+
 a = format[x] == 'c' || format[x] == 's';
-if (format[x] != '\0' && (a || format[x] == 'f' || format[x] == 'i'))
+if (format[x + 1] != '\0' && (a || format[x] == 'f' || format[x] == 'i'))
 printf(", ");
+x++;
 }
 printf("\n");
 va_end(al);
