@@ -15,7 +15,7 @@ float f;
 char *s, c;
 
 va_start(al, format);
-while (format[x] != '\0')
+while (format && format[x] != '\0')
 {
 switch (format[x])
 {
