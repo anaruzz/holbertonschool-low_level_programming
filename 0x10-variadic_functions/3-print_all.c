@@ -32,9 +32,9 @@ f = va_arg(al, double);
 printf("%f", f);
 break;
 case 's':
-s = va_arg(al, char *);
 if (s == NULL)
 printf("(nil)");
+s = va_arg(al, char *);
 printf("%s", s);
 break;
 }
