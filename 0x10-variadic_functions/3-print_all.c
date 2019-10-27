@@ -3,23 +3,6 @@
 #include <stdio.h>
 
 /**
-* existe - print strings
-* @x: char
-* Return: integer
-*/
-int existe(char x)
-{
-int a[4] = {'c', 'i', 'f', 's'};
-int i = 0;
-while (i <= 4)
-{
-if (a[i] == x)
-return (1);
-i++;
-}
-return (0);
-}
-/**
 * print_all - print strings
 * @format: string
 * Return: void
@@ -30,7 +13,6 @@ va_list al;
 int i, x = 0;
 float f;
 char *s, c;
-
 
 va_start(al, format);
 while (format[x] != '\0')
@@ -57,7 +39,7 @@ printf("%s", s);
 break;
 }
 x++;
-if (format[x] + 1 != '\0' && existe(format[x]) == 1)
+if (format[x] + 1 != '\0' && (format[x] == 'c' || format[x] == 's' || format[x] == 'f' || format[x] == 'i'))
 printf(", ");
 }
 printf("\n");
