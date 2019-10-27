@@ -39,7 +39,7 @@ printf("%s", s);
 break;
 }
 x++;
-if (format[x] + 1 != '\0' && (format[x] == 'c' || format[x] == 's' || format[x] == 'f' || format[x] == 'i'))
+if (format[x] != '\0' && (format[x] == 'c' || format[x] == 's' || format[x] == 'f' || format[x] == 'i'))
 printf(", ");
 }
 printf("\n");
