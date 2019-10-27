@@ -10,7 +10,7 @@
 void print_all(const char * const format, ...)
 {
 va_list al;
-int i, x = 0;
+int i, x = 0, a;
 float f;
 char *s, c;
 
@@ -42,7 +42,8 @@ printf("%s", s);
 break;
 }
 x++;
-if (format[x] != '\0' && (format[x] == 'c' || format[x] == 's' || format[x] == 'f' || format[x] == 'i'))
+a = format[x] == 'c' || format[x] == 's';
+if (format[x] != '\0' && (a || format[x] == 'f' || format[x] == 'i'))
 printf(", ");
 }
 printf("\n");
