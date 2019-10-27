@@ -19,6 +19,7 @@ printf("%d", va_arg(al, int));
 if (separator != NULL)
 printf("%s", separator);
 }
-printf("%d\n", va_arg(al, int));
+printf("%d", va_arg(al, int));
+printf("\n");
 va_end(al);
 }
