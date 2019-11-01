@@ -4,7 +4,7 @@
 * of a list_t list.
 * @head: head of the linked list.
 * @str: string to store in the list.
-* Return: address of the head. // Aladin Bensassi
+* Return: adress
 */
 
 list_t *add_node(list_t **head, const char *str)
