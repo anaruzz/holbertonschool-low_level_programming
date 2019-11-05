@@ -37,9 +37,10 @@ return (NULL);
 
 if (i > idx)
 return (NULL);
-
+if (i = idx)
+{
 node->next = temp->next;
 temp->next = node;
 return (node);
-
+}
 }
