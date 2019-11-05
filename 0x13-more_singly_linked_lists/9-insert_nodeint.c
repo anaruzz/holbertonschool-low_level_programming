@@ -28,6 +28,11 @@ while (temp && i + 1 < idx)
 {
 temp = temp->next;
 i++;
+if (temp == NULL)
+{
+free(node);
+return (NULL);
+}
 }
 
 node->next = temp->next;
