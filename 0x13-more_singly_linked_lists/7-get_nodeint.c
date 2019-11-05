@@ -15,7 +15,7 @@ if (head == NULL)
 return (NULL);
 
 i = 0;
-while(head && i < index)
+while (head && i < index)
 {
 head = head->next;
 i++;
