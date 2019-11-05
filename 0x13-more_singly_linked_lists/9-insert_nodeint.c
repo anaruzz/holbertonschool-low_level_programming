@@ -23,19 +23,15 @@ return (NULL);
 node->n = n;
 
 
-i = 1;
-while (temp && i < idx)
+i = 0;
+while (temp && i + 1 < idx)
 {
 temp = temp->next;
 i++;
 }
 
-if (i != idx)
-return (NULL);
-else
-{
 node->next = temp->next;
 temp->next = node;
 return (node);
-}
+
 }
