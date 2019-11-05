@@ -15,6 +15,10 @@ unsigned int i;
 
 if (head == NULL)
 return (NULL);
+
+if (idx == 0)
+return (NULL);
+
 temp = *head;
 
 node = malloc(sizeof(listint_t));
@@ -37,10 +41,9 @@ return (NULL);
 
 if (i > idx)
 return (NULL);
-if (i = idx)
-{
+
 node->next = temp->next;
 temp->next = node;
 return (node);
-}
+
 }
