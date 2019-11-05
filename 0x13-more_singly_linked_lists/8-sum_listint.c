@@ -16,7 +16,7 @@ return (i);
 
 while (head)
 {
-i+= head->n;
+i += head->n;
 head = head->next;
 }
 
