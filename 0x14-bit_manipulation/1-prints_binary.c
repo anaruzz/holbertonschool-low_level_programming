@@ -1,15 +1,30 @@
 #include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * get_bit - function that returns the value of a bit
- * @n: unsigned long int
- * @index: the given index
- * Return: the value of the bit
+ * print_binary - function that converts numbers to binary
+ * @n: number to convert
+ * Return: nothing
 */
-int get_bit(unsigned long int n, unsigned int index)
+void print_binary(unsigned long int n)
 {
-int val;
-if (index > 31)
-return (-1);
-val = (n >> index) & 1;
-return (val);
+int k, i;
+if (n < 2)
+{
+_putchar(n + '0');
+}
+else
+{
+for (i = 31; i >= 0; i--)
+{
+k = n >> i;
+if (k != 0)
+{
+if (k & 1)
+_putchar('1');
+else
+_putchar('0');
+}
+}
+}
 }
