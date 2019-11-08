@@ -1,5 +1,33 @@
 #include "holberton.h"
-#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * test - ftest an int
+ * @b: pointer
+ * Return: int
+*/
+int test (char *b)
+{
+int i = 0, c = 0;
+
+}
+
+/**
+ * puis - puisance
+ * @b[i]: integer
+ *@@i: integer
+ * Return: int
+*/
+int puis (char *x, int i)
+{
+int a, j;
+a = atoi (x);
+for (; i >=0; i--)
+j *= a;
+return (j);
+}
+
+
 /**
  * binary_to_uint - function that converts a binary to an unsigned int
  * @b: pointer
@@ -7,28 +35,21 @@
 */
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int sum, x, c;
-int i, len;
-if (b == NULL)
+int len, i, j, s;
+
+if (b == NULL ||
 return (0);
-len = 0;
-for (i = 0 ; b[i] != '\0' ; i++)
-{
-if (b[i] != '0' && b[i] != '1')
-return (0);
-len++;
-}
-len--;
-sum = 0;
-c = 1;
-for (i = len ; i >= 0 ; i--)
+
+for (len = 0; b[len]; len++)
+;
+j = 0;
+s = 0;
+for (i = len + 1; i >= 0; i--)
 {
 if (b[i] == '0')
-x = 0;
-if (b[i] == '1')
-x = 1;
-sum = sum + x *c;
-c = c * 2;
+{
+s = s + (puis(b[i], i) * b[i]);
+s *=10;
 }
-return (sum);
+}
 }
