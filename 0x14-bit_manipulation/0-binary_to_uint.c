@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
- * puis - puisance
- * @x: integer
- * @y: integer
- * Return: int
+* puis - power
+* @a: integer
+* @b: integer
+* Return: int
 */
-int puis (int a, int b)
+int puis(int a, int b)
 {
 int r = a;
 if (b == 0)
@@ -19,9 +19,9 @@ return (a);
 }
 
 /**
- * binary_to_uint - function that converts a binary to an unsigned int
- * @b: pointer
- * Return: the converted number
+* binary_to_uint - function that converts a binary to an unsigned int
+* @b: pointer
+* Return: the converted number
 */
 unsigned int binary_to_uint(const char *b)
 {
