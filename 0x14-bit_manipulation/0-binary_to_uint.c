@@ -1,6 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 
+
 /**
 * puis - power
 * @a: integer
@@ -17,6 +18,7 @@ for (; b > 1; b--)
 a *= r;
 return (a);
 }
+
 
 /**
 * binary_to_uint - function that converts a binary to an unsigned int
