@@ -24,16 +24,19 @@ return (r);
 */
 void print_binary(unsigned long int n)
 {
+  unsigned long int r;
 if (n == 0)
 _putchar('0');
-else
-n = rev(n);
-while (n != 0)
+
+r = rev(n);
+while (n > 0)
 {
-if (n & 1)
+if (r & 1)
 _putchar('1');
 else
 _putchar('0');
 n = n >> 1;
+r = r >> 1;
+
 }
 }
