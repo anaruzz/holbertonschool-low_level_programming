@@ -35,8 +35,8 @@ if (r & 1)
 _putchar('1');
 else
 _putchar('0');
-n = n >> 1;
-r = r >> 1;
+n >>= 1;
+r >>= 1;
 
 }
 }
