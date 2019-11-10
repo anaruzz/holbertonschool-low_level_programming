@@ -24,7 +24,7 @@ return (r);
 */
 void print_binary(unsigned long int n)
 {
-  unsigned long int r;
+unsigned long int r;
 if (n == 0)
 _putchar('0');
 
