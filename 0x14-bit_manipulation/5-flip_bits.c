@@ -13,7 +13,7 @@ unsigned int x = 0;
 
 while (n || m)
 {
-if (n ^ m)
+if ((n & 1) != (m & 1))
 x++;
 n >>= 1;
 m >>= 1;
