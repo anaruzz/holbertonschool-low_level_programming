@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
 * set_bit - sets a bit at index to 1
 * @n: pointer to int to bit-set
@@ -9,7 +8,7 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-long unsigned long int x;
+unsigned long int x;
 
 if (index > 31)
 return (-1);
