@@ -9,8 +9,14 @@
 */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-unsigned int bits = 0, xor;
-for (xor = n ^ m; xor != 0; xor = xor >> 1)
-bits +=  xor & 1;
-return (bits);
+unsigned int x = 0;
+
+while (n || m)
+{
+if (n ^ m)
+x++;
+n >>= 1;
+m >>= 1;
+}
+return (x);
 }
