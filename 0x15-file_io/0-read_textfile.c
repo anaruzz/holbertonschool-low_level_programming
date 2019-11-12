@@ -20,7 +20,7 @@ char *buf;
 if (filename == NULL)
 return (0);
 
-fd = open (filename, O_RDONLY);
+fd = open(filename, O_RDONLY);
 if (fd < 0)
 return (0);
 
@@ -28,7 +28,7 @@ buf = malloc(letters * sizeof(char));
 if (buf == NULL)
 return (0);
 
-rd = read (fd, buf, letters);
+rd = read(fd, buf, letters);
 if (rd < 0)
 return (0);
 buf[letters] = '\0';
@@ -37,7 +37,7 @@ wr = write(STDOUT_FILENO, buf, rd);
 if (wr < 0 || wr != rd)
 return (0);
 
-close (fd);
+close(fd);
 
 return (wr);
 }
