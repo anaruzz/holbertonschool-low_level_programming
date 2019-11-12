@@ -8,33 +8,30 @@
 /**
  * create_file - reads a text file and prints it to stdout.
  * @filename: file's name.
- * @text_context: number of letters it should read and print.
+ * @text_content: number of letters it should read and print.
  * Return: number of characters printed
  */
 int create_file(const char *filename, char *text_content)
 {
-int wr, fd, len;
+int fd;
+ssize_t wr, len;
 
 if (filename == NULL)
 return (-1);
 
-
-
-fd = open(filename, O_WRONLY|O_RDONLY|O_TRUNC);
+fd = open(filename, O_WRONLY | O_RDONLY | O_TRUNC);
 if (fd == -1)
 return (-1);
-if (text_content == NULL)
+if (text_content != NULL)
 {
 len = 0;
 while (text_content[len])
 len++;
 wr = write(fd, text_content, len);
 }
-
+close(fd);
 if (wr == -1)
 return (-1);
-
-close(fd);
 
 return (1);
 }
