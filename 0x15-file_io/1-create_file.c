@@ -18,17 +18,19 @@ int wr, fd, len;
 if (filename == NULL)
 return (-1);
 
+
+
+fd = open(filename, O_WRONLY|O_RDONLY|O_TRUNC);
+if (fd == -1)
+return (-1);
+if (text_content == NULL)
+{
 len = 0;
 while (text_content[len])
 len++;
-if (len == 0)
-len = 1;
-
-fd = open(filename, O_WRONLY|O_RDONLY|O_TRUNC, S_IRUSR | S_IWUSR);
-if (fd == -1)
-return (-1);
-
 wr = write(fd, text_content, len);
+}
+
 if (wr == -1)
 return (-1);
 
