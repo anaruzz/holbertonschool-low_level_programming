@@ -3,7 +3,7 @@
 
 /**
 * print_dlistint - print a doubly linked list
-* h: head
+* @h: head
 * Return: number of nodes printed
 */
 size_t print_dlistint(const dlistint_t *h)
