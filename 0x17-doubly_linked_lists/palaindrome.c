@@ -1,5 +1,6 @@
 #include "lists.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
 main - largest palaindrome of two 3 digit numbers
 Return: 0
@@ -8,6 +9,8 @@ Return: 0
 int main()
 {
 int i, j, largest = 0;
+FILE *fp;
+fp = fopen("102-result", "w");
 for (i = 100; i < 1000; i++)
 {
 	for (j = 100; j < 1000; j++)
@@ -16,5 +19,7 @@ for (i = 100; i < 1000; i++)
 		largest = i * j;
 	}
 }
-printf("%d\n", largest);
+fprintf(fp,"%d", largest);
+fclose(fp);
+return (0);
 }
