@@ -22,17 +22,14 @@ if (!ht)
 {
 return (NULL);
 }
-
+ht->size = size;
 ht->array = (hash_node_t **)malloc(size * sizeof(hash_node_t));
-if (ht->array == NULL)
+if (!(ht->array))
 {
 return (NULL);
+free(ht);
 }
 
-for (i = 0; i < size; i++)
-{
-ht->array[i] = NULL;
-}
 
 return (ht);
 }
