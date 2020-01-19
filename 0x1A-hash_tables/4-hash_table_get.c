@@ -10,14 +10,24 @@
 */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-unsigned long int index = key_index(key, ht->size);
-char *return_value = NULL;
+unsigned long int index = key_index((unsigned char *)key, ht->size);
+char *key_copy;
+hash_node_t *tmp;
 
 if (!index || !ht)
-return (return_value);
-else
+return (NULL);
+
+key_copy = strdup(key);
+tmp = ht->array[index];
+while(tmp)
 {
-return_value = ht->array[index]->value;
-return (return_value);
+  if(strcmp(tmp->key, key_copy) == 0)
+  break;
+  tmp = tmp->next;
 }
+free(key_copy);
+
+if (tmp == NULL)
+return (NULL);
+return (tmp->value);
 }
