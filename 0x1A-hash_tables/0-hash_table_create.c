@@ -9,26 +9,26 @@
 */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-hash_table_t *ht;
+hash_table_t *hash_t;
 
 if (size < 1)
 {
 return (NULL);
 }
 
-ht = malloc(sizeof(hash_table_t));
-if (!ht)
+hash_t = malloc(sizeof(hash_table_t));
+if (!hash_t)
 {
 return (NULL);
 }
-ht->size = size;
-ht->array = (hash_node_t **)malloc(size * sizeof(hash_node_t));
-if (!(ht->array))
+hash_t->size = size;
+hash_t->array = malloc(size * sizeof(hash_node_t *));
+if (!(hash_t->array))
 {
 return (NULL);
-free(ht);
+free(hash_t);
 }
 
 
-return (ht);
+return (hash_t);
 }
