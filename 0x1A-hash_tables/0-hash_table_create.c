@@ -17,12 +17,12 @@ return (NULL);
 }
 
 ht = malloc(sizeof(hash_table_t));
-if (!hash_t)
+if (!ht)
 {
 return (NULL);
 }
 ht->size = size;
-hash_t->array = malloc(size * sizeof(hash_node_t *));
+ht->array = malloc(size * sizeof(hash_node_t *));
 if (!(ht->array))
 {
 free(ht);
