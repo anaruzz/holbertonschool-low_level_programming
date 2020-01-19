@@ -19,11 +19,11 @@ return (NULL);
 
 key_copy = strdup(key);
 tmp = ht->array[index];
-while(tmp)
+while (tmp)
 {
-  if(strcmp(tmp->key, key_copy) == 0)
-  break;
-  tmp = tmp->next;
+if (strcmp(tmp->key, key_copy) == 0)
+break;
+tmp = tmp->next;
 }
 free(key_copy);
 
