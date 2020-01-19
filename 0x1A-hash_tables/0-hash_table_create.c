@@ -22,7 +22,7 @@ if (!ht)
 return (NULL);
 }
 ht->size = size;
-ht->array = malloc(size * sizeof(hash_node_t *));
+ht->array = malloc(sizeof(hash_node_t *) * size);
 if (!(ht->array))
 {
 free(ht);
