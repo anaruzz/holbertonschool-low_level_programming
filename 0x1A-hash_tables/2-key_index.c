@@ -16,6 +16,6 @@ int c;
 if (!key)
 return (-1);
 hash_key = hash_djb2(key);
- c = hash_key % size;
+c = hash_key % size;
 return (c);
 }
