@@ -8,7 +8,7 @@
  * @new : new node to add
  * @index: index of node to be added
 */
-void node_handler(hash_table_t *ht, hash_node_t *new, unsigned int index)
+int node_handler(hash_table_t *ht, hash_node_t *new, unsigned int index)
 {
 hash_node_t *tmp;
 tmp = ht->array[index];
@@ -28,6 +28,7 @@ if (tmp == NULL)
 {
 new->next = ht->array[index];
 ht->array[index] = new;
+return (1);
 }
 else
 {
@@ -36,6 +37,7 @@ tmp->value = strdup(tmp->value);
 free(new->value);
 free(new->key);
 free(new);
+return (0);
 }
 }
 else
@@ -43,6 +45,7 @@ else
 new->next = NULL;
 ht->array[index] = new;
 }
+return (1);
 }
 
 
@@ -58,6 +61,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 unsigned long int index, size = ht->size;
 hash_node_t *new;
+int ret;
 
 if (!key || strcmp(key, "") == 0 || !ht || !value)
 return (0);
@@ -72,7 +76,7 @@ new->value = strdup(value);
 new->key = strdup(key);
 new->next = NULL;
 
-node_handler(ht, new, index);
+ret = node_handler(ht, new, index);
 
-return (1);
+return (ret);
 }
