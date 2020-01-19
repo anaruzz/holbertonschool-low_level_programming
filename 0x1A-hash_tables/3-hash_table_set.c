@@ -14,7 +14,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 unsigned long int index, size = ht->size;
 hash_node_t *new, *current;
 
-if (!key || strlen(key) == 0 || !ht)
+if (!key || strlen(key) == 0 || !ht || !value)
 return (0);
 
 index = key_index((unsigned char *)key, size);
@@ -29,7 +29,7 @@ new->next = NULL;
 
 if (ht->array[index] != NULL)
 {
-current = ht->array[index]
+current = ht->array[index];
 while (current)
 {
 if (!strcmp(current->key, key))
@@ -44,5 +44,6 @@ ht->array[index] = new;
 }
 else
 ht->array[index] = new;
+
 return (1);
 }
