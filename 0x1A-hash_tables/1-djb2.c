@@ -3,22 +3,19 @@
 #include <stdio.h>
 #include "hash_tables.h"
 /**
-* hash_table_create - function to creato a hash table
-* @size: size of table
-* Return: hash_table
+* hash_djb2 - function to implement the djb2 algorithù
+* @str: string to work on
+* Return: unsigned long int
 */
 unsigned long int hash_djb2(const unsigned char *str)
 {
-unsigned long hash = 5381;
-int i, c;
+unsigned long int hash;
+int c;
 
-i = 0;
-c = 0;
-while (str[i])
+hash = 5381;
+while ((c = *str++))
 {
-c = str[i];
-hash = ((hash << 5) + hash) + c;
-i++;
+hash = ((hash << 5) + hash) +c; /* hash * 33 + c */
 }
 return (hash);
 }
