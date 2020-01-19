@@ -11,7 +11,6 @@
 int node_handler(hash_table_t *ht, hash_node_t *new, unsigned int index)
 {
 hash_node_t *tmp;
-tmp = ht->array[index];
 
 if (ht->array[index] != NULL)
 {
@@ -19,9 +18,7 @@ tmp = ht->array[index];
 while (tmp)
 {
 if (strcmp(tmp->key, new->key) == 0)
-{
 break;
-}
 tmp = tmp->next;
 }
 if (tmp == NULL)
@@ -33,7 +30,7 @@ return (1);
 else
 {
 free(tmp->value);
-tmp->value = strdup(tmp->value);
+free(tmp->key);
 free(new->value);
 free(new->key);
 free(new);
@@ -42,8 +39,9 @@ return (0);
 }
 else
 {
-new->next = NULL;
 ht->array[index] = new;
+new->next = NULL;
+return (1);
 }
 return (1);
 }
