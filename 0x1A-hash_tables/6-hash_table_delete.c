@@ -22,8 +22,9 @@ if (ht)
     while(tmp)
     {
       ht->array[i] = ht->array[i]->next;
+free(tmp->value);
+free(tmp->key);
 free(tmp);
-tmp = ht->array[i];
     }
   }
   }
