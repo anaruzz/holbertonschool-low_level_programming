@@ -4,9 +4,9 @@
 #include "hash_tables.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always EXIT_SUCCESS.
+ * hash_table_delete - delete ahashtable.
+ *@ht: hashtable
+ * Return: Void.
  */
 void hash_table_delete(hash_table_t *ht)
 {
