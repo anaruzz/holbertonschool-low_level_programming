@@ -1,30 +1,33 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "hash_tables.h"
 
 /**
- * hash_table_delete - deletes a hash table
- * @ht: hash table
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always EXIT_SUCCESS.
  */
 void hash_table_delete(hash_table_t *ht)
 {
-unsigned long int i = 0;
+  unsigned int size = ht->size, i;
 hash_node_t *tmp;
-
 if (ht)
 {
-for  (i = 0; i < ht->size; i++)
-{
-if (ht->array[i])
-{
-tmp = ht->array[i];
-while (tmp)
-{
-ht->array[i] = ht->array[i]->next;
+  for (i = 0; i < size; i++)
+  {
+  if (ht->array[i] != NULL)
+  {
+    tmp = ht->array[i];
+    while(tmp)
+    {
+      ht->array[i] = ht->array[i]->next;
 free(tmp);
 tmp = ht->array[i];
-}
-}
-}
-free(ht->array);
-free(ht);
+    }
+  }
+  }
+  free(ht->array);
+  free(ht);
 }
 }
