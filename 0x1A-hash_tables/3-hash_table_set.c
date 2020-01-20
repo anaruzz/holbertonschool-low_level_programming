@@ -43,7 +43,7 @@ ht->array[index] = new;
 new->next = NULL;
 return (1);
 }
-return (1);
+return (0);
 }
 
 
