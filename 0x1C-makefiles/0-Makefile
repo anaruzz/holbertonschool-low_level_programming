@@ -1,4 +1,3 @@
-# -*- Makefile -*-
 all: holberton
 
 holberton: holberton.o main.o
