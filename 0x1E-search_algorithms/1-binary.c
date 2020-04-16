@@ -55,7 +55,7 @@ l = 0;
 		else if (array[m] > value)
 		{
 			r = m;
-			print_array(array, l, r+1);
+			print_array(array, l, r + 1);
 		}
 		else
 			return (m);
