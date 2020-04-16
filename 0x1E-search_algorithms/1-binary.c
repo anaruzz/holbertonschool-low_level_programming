@@ -52,7 +52,7 @@ r = size - 1;
 		}
 		else if (array[m] > value)
 		{
-			r = m + 1;
+			r = m;
 			print_array(array, l, r);
 		}
 		else
